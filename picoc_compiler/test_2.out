@@ -1,0 +1,45 @@
+#Picoc09 2011-12-13
+__start__:
+	call	main
+	halt
+#組込み関数 read()
+#ここに read() の機械語を書く
+read:
+	enter
+	rd
+	storel	2
+	leave
+	ret
+#組込み関数 write()
+#ここに write() の機械語を書く
+write:
+	enter
+	pushl	2
+	wr
+	leave
+	ret
+#組込み関数 writeln()
+writeln:
+	enter
+	wrln
+	leave
+	ret
+main:
+	enter
+	mvsp	-1
+	pushi	10
+	pushi	4
+	mod
+	storel	-1
+	mvsp	1
+	mvsp	-1
+	call	write
+	storet	1
+	mvsp	1
+	mvsp	1
+	mvsp	-1
+	call	writeln
+	mvsp	1
+	mvsp	1
+	leave
+	ret

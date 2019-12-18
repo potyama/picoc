@@ -1,0 +1,1304 @@
+%!PS-Adobe-2.0
+% Japanese text to PostScript filter  1996-03-19
+%   by maruyama@j.kisarazu.ac.jp
+/LeftMargin 56.692913 def
+/lm LeftMargin def
+/RightMargin 28.346457 def
+/rm RightMargin def
+/TopMargin 42.519685 def
+/BottomMargin 28.346457 def
+/HXScale 7.200000 def
+/HYScale -8.000000 def
+/ZXScale 8.000000 def
+/ZYScale -8.000000 def
+/HF {/Courier findfont [HXScale 0 0 HYScale 0 0] makefont} def
+/ZF	{/Ryumin-Light-H findfont [ZXScale 0 0 ZYScale 0 0] makefont} def
+/THXScale 10.000000 def
+/THYScale -10.000000 def
+/TZXScale 10.000000 def
+/TZYScale -10.000000 def
+/THF {/Times-Italic findfont [THXScale 0 0 THYScale 0 0] makefont} def
+/TZF {/GothicBBB-Medium-H findfont [ZXScale 0 0 ZYScale 0 0] makefont} def
+/FHXScale 10.000000 def
+/FHYScale -10.000000 def
+/FHF {/Times-Roman findfont [THXScale 0 0 THYScale 0 0] makefont} def
+/PaperXMin 0 def
+/PaperXMax 595.275591 def
+/PaperYMin 0 def
+/PaperYMax 841.889764 def
+/CPL 120 def
+/LPP 75 def
+/XMin {lm} def
+/XMax {PaperXMax rm sub} def
+/YMin TopMargin def
+/YMax PaperYMax BottomMargin sub def
+/XHStep XMax XMin sub CPL 1 add div def
+/XZStep XMax XMin sub CPL 1 add div 2 mul def
+/YStep YMax YMin sub LPP 1 add div def
+/TXHStep THXScale def
+/TXZStep TZXScale def
+/x 0 def
+/y 0 def
+/LeftSide {
+	gsave
+	PaperXMin PaperYMax translate
+	1 2 sqrt div dup scale
+	-90 rotate
+} def
+/RightSide {
+	gsave
+	PaperXMin PaperYMax 2 div translate
+	1 2 sqrt div dup scale
+	-90 rotate
+} def
+/PS {
+	gsave
+	PaperXMin PaperYMax translate
+	1 -1 scale
+	/y YMin YStep add def
+	/x XMin def
+} def
+/LE {
+	/y y YStep add def
+	/x XMin def
+} def
+/PE {
+	grestore
+} def
+/incxh {/x x XHStep add def} def
+/incxz {/x x XZStep add def} def
+/inctxh {/x x TXHStep add def} def
+/inctxz {/x x TXZStep add def} def
+/h {
+	HF setfont
+	dup
+	stringwidth
+	pop
+	XHStep exch sub 2 div x add y moveto
+	show
+	incxh
+} def
+/z { ZF setfont x y moveto show incxz } def
+/sepline {
+	newpath
+	XMin YMin YStep 1.2 mul add moveto XMax YMin YStep 1.2 mul add lineto
+	currentgray 0.5 setgray stroke setgray
+} def
+/title {
+	THF setfont
+	dup
+	stringwidth
+	pop
+	XMax exch sub y moveto
+	show
+} def
+/foot_page {
+	FHF setfont
+	dup
+	stringwidth
+	pop
+	XMax exch sub XMin add 2 div YMax YStep sub moveto
+	show
+} def
+%%Page: 1 1
+PS
+(Tue Jul 12 18:23:39 JST 2011:  picoc09ebnf.doc  \(maruyama\)      page  1) title
+sepline
+LE
+LE
+(p)h
+(i)h
+(c)h
+(o)h
+(c)h
+(0)h
+(9)h
+( )h
+<244e>z
+<4a38>z
+<4b21>z
+(\()h
+(2)h
+(0)h
+(1)h
+(1)h
+(-)h
+(0)h
+(7)h
+(-)h
+(1)h
+(1)h
+( )h
+<4331>z
+<3960>z
+<3c30>z
+<244e>z
+<4a38>z
+<4b21>z
+<2472>z
+<3d24>z
+<4035>z
+(\))h
+LE
+LE
+<2557>z
+<256d>z
+<2530>z
+<2569>z
+<2560>z
+( )h
+( )h
+(:)h
+(:)h
+(=)h
+( )h
+<3458>z
+<3f74>z
+<446a>z
+<3541>z
+( )h
+({)h
+( )h
+<3458>z
+<3f74>z
+<446a>z
+<3541>z
+( )h
+(})h
+( )h
+(.)h
+LE
+LE
+<3458>z
+<3f74>z
+<446a>z
+<3541>z
+( )h
+( )h
+( )h
+( )h
+(:)h
+(:)h
+(=)h
+( )h
+<373f>z
+<4c3e>z
+( )h
+<3458>z
+<3f74>z
+<4c3e>z
+( )h
+<323e>z
+<307a>z
+<3f74>z
+<406b>z
+<3840>z
+( )h
+<4a23>z
+<4a38>z
+( )h
+(.)h
+LE
+LE
+<373f>z
+<4c3e>z
+( )h
+( )h
+( )h
+( )h
+( )h
+( )h
+( )h
+( )h
+(:)h
+(:)h
+(=)h
+( )h
+(")h
+(i)h
+(n)h
+(t)h
+(")h
+( )h
+(.)h
+LE
+LE
+<3458>z
+<3f74>z
+<4c3e>z
+( )h
+( )h
+( )h
+( )h
+( )h
+( )h
+(:)h
+(:)h
+( )h
+( )h
+<3c31>z
+<4a4c>z
+<3b52>z
+( )h
+(.)h
+LE
+LE
+<323e>z
+<307a>z
+<3f74>z
+<406b>z
+<3840>z
+( )h
+( )h
+(:)h
+(:)h
+(=)h
+( )h
+(")h
+(\()h
+(")h
+( )h
+([)h
+( )h
+<323e>z
+<307a>z
+<3f74>z
+<4a42>z
+<2453>z
+( )h
+(])h
+( )h
+(")h
+(\))h
+(")h
+( )h
+(.)h
+LE
+LE
+<323e>z
+<307a>z
+<3f74>z
+<4a42>z
+<2453>z
+( )h
+( )h
+(:)h
+(:)h
+(=)h
+( )h
+<323e>z
+<307a>z
+<3f74>z
+( )h
+({)h
+( )h
+(")h
+(,)h
+(")h
+( )h
+<323e>z
+<307a>z
+<3f74>z
+( )h
+(})h
+( )h
+(.)h
+LE
+LE
+<323e>z
+<307a>z
+<3f74>z
+( )h
+( )h
+( )h
+( )h
+( )h
+( )h
+(:)h
+(:)h
+(=)h
+( )h
+<373f>z
+<4c3e>z
+( )h
+<307a>z
+<3f74>z
+<4c3e>z
+( )h
+(.)h
+LE
+LE
+<307a>z
+<3f74>z
+<4c3e>z
+( )h
+( )h
+( )h
+( )h
+( )h
+( )h
+(:)h
+(:)h
+(=)h
+( )h
+<3c31>z
+<4a4c>z
+<3b52>z
+( )h
+(.)h
+LE
+LE
+<4a23>z
+<4a38>z
+( )h
+( )h
+( )h
+( )h
+( )h
+( )h
+( )h
+( )h
+(:)h
+(:)h
+(=)h
+( )h
+(")h
+({)h
+(")h
+( )h
+<4a51>z
+<3f74>z
+<406b>z
+<3840>z
+<4a42>z
+<2453>z
+( )h
+<4a38>z
+<4a42>z
+<2453>z
+( )h
+(")h
+(})h
+(")h
+( )h
+(.)h
+LE
+LE
+<4a51>z
+<3f74>z
+<406b>z
+<3840>z
+<4a42>z
+<2453>z
+(:)h
+(:)h
+(=)h
+( )h
+({)h
+( )h
+<4a51>z
+<3f74>z
+<406b>z
+<3840>z
+( )h
+(})h
+( )h
+(.)h
+LE
+LE
+<4a51>z
+<3f74>z
+<406b>z
+<3840>z
+( )h
+( )h
+( )h
+( )h
+(:)h
+(:)h
+(=)h
+( )h
+<373f>z
+<4c3e>z
+( )h
+<4a51>z
+<3f74>z
+<4c3e>z
+<4a42>z
+<2453>z
+( )h
+(")h
+(;)h
+(")h
+( )h
+(.)h
+LE
+LE
+<4a51>z
+<3f74>z
+<4c3e>z
+<4a42>z
+<2453>z
+( )h
+( )h
+(:)h
+(:)h
+(=)h
+( )h
+<4a51>z
+<3f74>z
+<4c3e>z
+( )h
+({)h
+( )h
+(")h
+(,)h
+(")h
+( )h
+<4a51>z
+<3f74>z
+<4c3e>z
+( )h
+(})h
+( )h
+(.)h
+LE
+LE
+<4a51>z
+<3f74>z
+<4c3e>z
+( )h
+( )h
+( )h
+( )h
+( )h
+( )h
+(:)h
+(:)h
+(=)h
+( )h
+<3c31>z
+<4a4c>z
+<3b52>z
+( )h
+(.)h
+LE
+LE
+<4a38>z
+<4a42>z
+<2453>z
+( )h
+( )h
+( )h
+( )h
+( )h
+( )h
+(:)h
+(:)h
+(=)h
+( )h
+({)h
+( )h
+<4a38>z
+( )h
+(})h
+( )h
+(.)h
+LE
+LE
+<4a38>z
+( )h
+( )h
+( )h
+( )h
+( )h
+( )h
+( )h
+( )h
+( )h
+( )h
+(:)h
+(:)h
+(=)h
+( )h
+<3c30>z
+<4a38>z
+( )h
+(|)h
+( )h
+<4a23>z
+<4a38>z
+( )h
+(|)h
+( )h
+<412a>z
+<4272>z
+<4a38>z
+( )h
+(|)h
+( )h
+<483f>z
+<497c>z
+<4a38>z
+( )h
+(|)h
+( )h
+<256a>z
+<253f>z
+<213c>z
+<2573>z
+<4a38>z
+( )h
+(.)h
+LE
+LE
+<3c30>z
+<4a38>z
+( )h
+( )h
+( )h
+( )h
+( )h
+( )h
+( )h
+( )h
+(:)h
+(:)h
+(=)h
+( )h
+([)h
+( )h
+<3c30>z
+( )h
+(])h
+( )h
+(")h
+(;)h
+(")h
+( )h
+(.)h
+LE
+LE
+<412a>z
+<4272>z
+<4a38>z
+( )h
+( )h
+( )h
+( )h
+( )h
+( )h
+(:)h
+(:)h
+(=)h
+( )h
+(")h
+(i)h
+(f)h
+(")h
+( )h
+(")h
+(\()h
+(")h
+( )h
+<3c30>z
+( )h
+(")h
+(\))h
+(")h
+( )h
+<4a38>z
+( )h
+([)h
+( )h
+(")h
+(e)h
+(l)h
+(s)h
+(e)h
+(")h
+( )h
+<4a38>z
+( )h
+(])h
+( )h
+(.)h
+LE
+LE
+<483f>z
+<497c>z
+<4a38>z
+( )h
+( )h
+( )h
+( )h
+( )h
+( )h
+(:)h
+(:)h
+(=)h
+( )h
+(")h
+(w)h
+(h)h
+(i)h
+(l)h
+(e)h
+(")h
+( )h
+(")h
+(\()h
+(")h
+( )h
+<3c30>z
+( )h
+(")h
+(\))h
+(")h
+( )h
+<4a38>z
+( )h
+(.)h
+LE
+LE
+<256a>z
+<253f>z
+<213c>z
+<2573>z
+<4a38>z
+( )h
+( )h
+(:)h
+(:)h
+(=)h
+( )h
+(")h
+(r)h
+(e)h
+(t)h
+(u)h
+(r)h
+(n)h
+(")h
+( )h
+([)h
+( )h
+<3c30>z
+( )h
+(])h
+( )h
+(")h
+(;)h
+(")h
+( )h
+(.)h
+LE
+LE
+<3c30>z
+( )h
+( )h
+( )h
+( )h
+( )h
+( )h
+( )h
+( )h
+( )h
+( )h
+(:)h
+(:)h
+(=)h
+( )h
+<4579>z
+<3241>z
+<3c30>z
+( )h
+(|)h
+( )h
+<4265>z
+<467e>z
+<3c30>z
+( )h
+(.)h
+( )h
+( )h
+<2228>z
+(L)h
+(L)h
+(\()h
+(1)h
+(\))h
+( )h
+<244b>z
+<244a>z
+<2443>z
+<2446>z
+<2424>z
+<244a>z
+<2424>z
+LE
+LE
+<4265>z
+<467e>z
+<3c30>z
+( )h
+( )h
+( )h
+( )h
+( )h
+( )h
+(:)h
+(:)h
+(=)h
+( )h
+<4a51>z
+<3f74>z
+<4c3e>z
+( )h
+(")h
+(=)h
+(")h
+( )h
+<3c30>z
+( )h
+(.)h
+LE
+LE
+<4579>z
+<3241>z
+<3c30>z
+( )h
+( )h
+( )h
+( )h
+( )h
+( )h
+(:)h
+(:)h
+(=)h
+( )h
+<3458>z
+<3738>z
+<3c30>z
+( )h
+({)h
+( )h
+(\()h
+( )h
+(")h
+(=)h
+(=)h
+(")h
+( )h
+(|)h
+( )h
+(")h
+(!)h
+(=)h
+(")h
+( )h
+(\))h
+( )h
+<3458>z
+<3738>z
+<3c30>z
+( )h
+(})h
+( )h
+(.)h
+LE
+LE
+<3458>z
+<3738>z
+<3c30>z
+( )h
+( )h
+( )h
+( )h
+( )h
+( )h
+(:)h
+(:)h
+(=)h
+( )h
+<3243>z
+<3b3b>z
+<3c30>z
+( )h
+({)h
+( )h
+(\()h
+( )h
+(")h
+(<)h
+(")h
+( )h
+(|)h
+( )h
+(")h
+(>)h
+(")h
+( )h
+(|)h
+( )h
+(")h
+(<)h
+(=)h
+(")h
+( )h
+(|)h
+( )h
+(")h
+(>)h
+(=)h
+(")h
+( )h
+(\))h
+( )h
+<3243>z
+<3b3b>z
+<3c30>z
+( )h
+(})h
+( )h
+(.)h
+LE
+LE
+<3243>z
+<3b3b>z
+<3c30>z
+( )h
+( )h
+( )h
+( )h
+( )h
+( )h
+(:)h
+(:)h
+(=)h
+( )h
+<3e68>z
+<3b3b>z
+<3c30>z
+( )h
+({)h
+( )h
+(\()h
+( )h
+(")h
+(+)h
+(")h
+( )h
+(|)h
+( )h
+(")h
+(-)h
+(")h
+( )h
+(\))h
+( )h
+<3e68>z
+<3b3b>z
+<3c30>z
+( )h
+(})h
+( )h
+(.)h
+LE
+LE
+<3e68>z
+<3b3b>z
+<3c30>z
+( )h
+( )h
+( )h
+( )h
+( )h
+( )h
+(:)h
+(:)h
+(=)h
+( )h
+<4331>z
+<3960>z
+<3c30>z
+( )h
+({)h
+( )h
+(\()h
+( )h
+(")h
+(*)h
+(")h
+( )h
+(|)h
+( )h
+(")h
+(/)h
+(")h
+( )h
+(|)h
+( )h
+(")h
+(%)h
+(")h
+( )h
+(\))h
+( )h
+<4331>z
+<3960>z
+<3c30>z
+( )h
+(})h
+( )h
+(.)h
+LE
+LE
+<4331>z
+<3960>z
+<3c30>z
+( )h
+( )h
+( )h
+( )h
+( )h
+( )h
+(:)h
+(:)h
+(=)h
+( )h
+([)h
+( )h
+<4331>z
+<3960>z
+<3169>z
+<3b3b>z
+<3b52>z
+( )h
+(])h
+( )h
+<4331>z
+<3960>z
+<3c30>z
+( )h
+(|)h
+( )h
+<4147>z
+<3c30>z
+( )h
+(.)h
+LE
+LE
+<4147>z
+<3c30>z
+( )h
+( )h
+( )h
+( )h
+( )h
+( )h
+( )h
+( )h
+(:)h
+(:)h
+(=)h
+( )h
+<4a51>z
+<3f74>z
+<4c3e>z
+( )h
+(|)h
+( )h
+<3458>z
+<3f74>z
+<4c3e>z
+( )h
+(")h
+(\()h
+(")h
+( )h
+([)h
+( )h
+<3c42>z
+<307a>z
+<3f74>z
+<4a42>z
+<2453>z
+( )h
+(])h
+( )h
+(")h
+(\))h
+(")h
+( )h
+(|)h
+( )h
+<446a>z
+<3f74>z
+( )h
+(|)h
+( )h
+(")h
+(\()h
+(")h
+( )h
+<3c30>z
+( )h
+(")h
+(\))h
+(")h
+( )h
+(.)h
+LE
+LE
+<4331>z
+<3960>z
+<3169>z
+<3b3b>z
+<3b52>z
+( )h
+( )h
+(:)h
+(:)h
+(=)h
+( )h
+(")h
+(+)h
+(")h
+( )h
+(|)h
+( )h
+(")h
+(-)h
+(")h
+( )h
+(.)h
+LE
+LE
+<3c42>z
+<307a>z
+<3f74>z
+<4a42>z
+<2453>z
+( )h
+( )h
+(:)h
+(:)h
+(=)h
+( )h
+<3c30>z
+( )h
+({)h
+( )h
+(")h
+(,)h
+(")h
+( )h
+<3c30>z
+( )h
+(})h
+( )h
+(.)h
+LE
+LE
+<446a>z
+<3f74>z
+( )h
+( )h
+( )h
+( )h
+( )h
+( )h
+( )h
+( )h
+(:)h
+(:)h
+(=)h
+( )h
+<3f74>z
+<3b7a>z
+( )h
+({)h
+( )h
+<3f74>z
+<3b7a>z
+( )h
+(})h
+( )h
+(.)h
+LE
+LE
+<3c31>z
+<4a4c>z
+<3b52>z
+( )h
+( )h
+( )h
+( )h
+( )h
+( )h
+(:)h
+(:)h
+(=)h
+( )h
+(\()h
+( )h
+<3151>z
+<3b7a>z
+( )h
+(|)h
+( )h
+(")h
+(_)h
+(")h
+( )h
+(\))h
+( )h
+({)h
+( )h
+<3151>z
+<3b7a>z
+( )h
+(|)h
+( )h
+<3f74>z
+<3b7a>z
+( )h
+(|)h
+( )h
+(")h
+(_)h
+(")h
+( )h
+(})h
+( )h
+(.)h
+LE
+LE
+<3f74>z
+<3b7a>z
+( )h
+( )h
+( )h
+( )h
+( )h
+( )h
+( )h
+( )h
+(:)h
+(:)h
+(=)h
+( )h
+(")h
+(0)h
+(")h
+( )h
+(|)h
+( )h
+(")h
+(1)h
+(")h
+( )h
+(|)h
+( )h
+(")h
+(2)h
+(")h
+( )h
+(|)h
+( )h
+(")h
+(3)h
+(")h
+( )h
+(|)h
+( )h
+(")h
+(4)h
+(")h
+( )h
+(|)h
+( )h
+(")h
+(5)h
+(")h
+( )h
+(|)h
+( )h
+(")h
+(6)h
+(")h
+( )h
+(|)h
+( )h
+(")h
+(7)h
+(")h
+( )h
+(|)h
+( )h
+(")h
+(8)h
+(")h
+( )h
+(|)h
+( )h
+(")h
+(9)h
+(")h
+( )h
+(.)h
+LE
+LE
+<3151>z
+<3b7a>z
+( )h
+( )h
+( )h
+( )h
+( )h
+( )h
+( )h
+( )h
+(:)h
+(:)h
+(=)h
+( )h
+(")h
+(a)h
+(")h
+( )h
+(|)h
+( )h
+(.)h
+(.)h
+(.)h
+( )h
+(|)h
+( )h
+(")h
+(z)h
+(")h
+( )h
+(|)h
+( )h
+(")h
+(A)h
+(")h
+( )h
+(|)h
+( )h
+(.)h
+(.)h
+(.)h
+( )h
+(|)h
+( )h
+(")h
+(Z)h
+(")h
+( )h
+(.)h
+LE
+PE
+showpage

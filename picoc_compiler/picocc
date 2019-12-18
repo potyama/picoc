@@ -1,0 +1,7 @@
+#!/bin/sh
+#
+# test_parser を ~/bin などにコピーしておくこと
+#
+
+OBJ=`basename $1 .c`.out
+test_parser < $1 > $OBJ

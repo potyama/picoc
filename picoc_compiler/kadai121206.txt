@@ -1,0 +1,53 @@
+言語処理系
+
+1. コンパイルと実行
+  必要ファイルは，/home/jugyou/j4/2012-gengo/picoc_kadai_20121206.tgz にある．
+
+(1) ファイルを適当なディレクトリに展開する
+
+  % tar xvzf picoc_kadai_20121206.tgz
+
+
+(2) コンパイラ(test_parser)と仮想計算機(test_vm)をコンパイルする
+  
+  % make
+
+(3) test.c をコンパイルして実行する
+
+  % test_parser < test.c > test.out
+  % test_vm  test.out
+
+※test.out は仮想計算機の機械語(アセンブリ言語)プログラムで，テキストファイル
+
+2. 課題
+
+  コンパイラに次の機能を追加しなさい．
+
+(1) 組込み関数 read, write を追加
+(2) % 演算子を追加
+(3) parse_factor() の <変数> に対応するコード生成を追加
+(4) RETURN 文のコード生成を追加
+(5) WHILE 文のコード生成を追加
+(6) IF 文に ELSE を追加
+(7) DO-WHILE 文を追加
+
+発展課題
+(8) += 演算子を追加
+(9) FOR 文を追加
+(A) グローバル変数を導入
+(B) x86 ネイティブコードコンパイラの作成
+    ※picoc が出力する仮想計算機命令を x86 に変換するのが簡単
+
+※ファイル
+codegen.c			コードを出力する
+id_table.c			識別子を管理する
+id_table_stack.c	識別子表の入れ子構造を管理する
+parser.c			構文解析とコード生成を行う
+scanner.c			字句解析を行う
+test_parser.c		コンパイラの main		
+test_scanner.c		scanner.c のテストプログラム
+vm/label_table.c	label を管理する
+vm/test_vm.c		vm の main
+vm/vm.c				仮想計算機
+test/*.c			picoc で実行できるサンプルプログラム
+document/*			BNF，命令セットなど
