@@ -158,12 +158,9 @@ parser_parse_program(void)
 void
 parse_program(void)
 {
-	token_t t;
 
-	while(nextsym.sym != SYM_IDENTIFIER && t.sym != SYM_LPAREN){
+	while(nextsym.sym != SYM_INT){
 		parse_global_definition();
-		t = scanner_get_next_sym();
-		scanner_push_back_sym(t);
 	}
 	parse_function_definition();
 	while (nextsym.sym != SYM_EOF){
@@ -187,36 +184,6 @@ parse_global_definition(void){
 		}
 	}
 
-	t = scanner_get_next_sym();
-	scanner_push_back_sym(t);
-
-	if (nextsym.sym == SYM_IDENTIFIER && (t.sym == SYM_EQUAL || t.sym == SYM_PLUSEQUAL)){
-
-		id_info_t	*info;
-
-		if ((info = search_for_identifier(nextsym.identifier)) == NULL){
-			/* 変数が未定義 */
-			ERROR("Parser error");
-		}
-		if (info->id_type != ID_VARIABLE){
-			/* この名前は変数名でない */
-			ERROR("Parser error");
-		}
-		nextsym = scanner_get_next_sym();
-		if (nextsym.sym != SYM_EQUAL && nextsym.sym != SYM_PLUSEQUAL){
-			ERROR("Parser error");
-		}
-		if(nextsym.sym == SYM_EQUAL){
-			nextsym = scanner_get_next_sym();
-			parse_expression();
-			codegen_put_code_num("storeg",info->variable.offset);
-		}else if(nextsym.sym == SYM_PLUSEQUAL){
-			nextsym = scanner_get_next_sym();
-			parse_expression();
-			codegen_put_code("add");
-			codegen_put_code_num("storeg", info->variable.offset);
-		}
-	}
 }
 
 /*関数定義 ::= 型名 関数名 仮引数宣言 複文 . */
