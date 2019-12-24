@@ -32,7 +32,10 @@ static void
 parse_program(void);
 
 static void
-parse_global_definition(void);
+parse_global_definition(int x);
+
+static void
+parse_func_var(void);
 
 static void
 parse_function_definition(void);
@@ -160,30 +163,42 @@ parse_program(void)
 {
 
 	while(nextsym.sym != SYM_INT){
-		parse_global_definition();
+		parse_func_var();
 	}
-	parse_function_definition();
+
 	while (nextsym.sym != SYM_EOF){
 		parse_function_definition();
 	}
 }
 
 void
-parse_global_definition(void){
-
-	token_t t;
-
-	while(nextsym.sym == SYM_INT){
-		if (nextsym.sym != SYM_INT){
-			ERROR("Parser error");
-		}
-		nextsym = scanner_get_next_sym();
-		parse_variable_list();
-		if (nextsym.sym != SYM_SEMICOLON){
-			ERROR("Parser error");
-		}
+parse_func_var(void){
+	if (nextsym.sym != SYM_INT){
+		ERROR("Parser error");
 	}
+	nextsym = scanner_get_next_sym();
+	int x = nextsym;
+	nextsym = scanner_get_next_sym();
+	if(nextsym.sym == SYM_LPAREN){
+		parse_function_definition();
+	}else if(nextsym.sym == SYM_SEMICOLON){
+		parse_global_definition(x);
+	}
+}
 
+void
+parse_global_definition(int x){
+
+	id_info_t	*info;
+
+	if ((info = search_for_identifier(x.identifier)) == NULL){
+		/* 変数が未定義 */
+		ERROR("Parser error");
+	}
+	if(nextsym.sym == SYM_EQUAL){
+		nextsym = scanner_get_next_sym();
+		parse_expression();
+		codegen_put_code_num("storeg",info->variable.offset);
 }
 
 /*関数定義 ::= 型名 関数名 仮引数宣言 複文 . */
