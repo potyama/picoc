@@ -7,7 +7,9 @@
 typedef enum{
 	HALT,
 	PUSHL,
+	PUSHG,
 	STOREL,
+	STOREG,
 	STORET,
 	PUSHI,
 	CALL,

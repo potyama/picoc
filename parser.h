@@ -5,7 +5,7 @@
 extern void
 parser_init(void);
 
-extern int
+extern void
 parser_parse_program(void);
 
 #endif

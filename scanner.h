@@ -7,19 +7,21 @@
 #define	MAX_INDENTIFIER_LEN	(256)
 
 typedef enum {
-	SYM_INVALID,	
+	SYM_INVALID,
 	SYM_IDENTIFIER,
 	SYM_CONSTANT_INT,
 	SYM_IF,				/* if */
 	SYM_ELSE,			/* else */
 	SYM_WHILE,			/* while */
+	SYM_DO,				/* do */
+	SYM_FOR, 			/* for */
 	SYM_RETURN,			/* return */
 	SYM_INT,			/* int */
 	SYM_PLUS,			/* + */
 	SYM_MINUS,			/* - */
-	SYM_ASTERISK,		/* * */
+	SYM_ASTERISK,			/* * */
 	SYM_SLASH,			/* / */
-	SYM_PERCENT,		/* % */
+	SYM_PERCENT,			/* % */
 	SYM_LT,				/* < */
 	SYM_LE,				/* <= */
 	SYM_GT,				/* > */
@@ -27,7 +29,8 @@ typedef enum {
 	SYM_EQ,				/* == */
 	SYM_NE,				/* != */
 	SYM_EQUAL,			/* = */
-	SYM_SEMICOLON,		/* ; */
+	SYM_PLUSEQUAL, 			/* += */
+	SYM_SEMICOLON,			/* ; */
 	SYM_COMMA,			/* , */
 	SYM_LPAREN,			/* ( */
 	SYM_RPAREN,			/* ) */
@@ -50,5 +53,11 @@ scanner_init(FILE *s);
 
 extern token_t
 scanner_get_next_sym(void);
+
+extern void
+scanner_push_back_sym(token_t t);
+
+extern int
+scanner_get_current_line_number(void);
 
 #endif

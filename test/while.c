@@ -1,7 +1,7 @@
 int main(){
 
 	int n;
-	n = 100;
+	n = 10;
 
 	while(n>0){
 		n = n/2;
